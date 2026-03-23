@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>novaneoweb — Web Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">novaneoweb.</a>
+  <a class="nav-cta" href="#cta">Start a project</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-circle"></div>
+  <p class="hero-tag">Web Design &amp; Digital Growth</p>
+  <h1 class="hero-title">
+    Websites that<br><em>actually</em><br>work.
+  </h1>
+  <p class="hero-sub">We design and build digital experiences that attract clients, communicate clearly, and grow your business.</p>
+  <span class="hero-scroll">Scroll</span>
+</section>
+
+<hr class="divider">
+
+<!-- INTRO -->
+<section id="intro">
+  <div class="intro-left reveal">
+    <p class="intro-label">What we do</p>
+    <h2 class="intro-heading">Design that drives growth, not just attention.</h2>
+  </div>
+  <div class="intro-right reveal">
+    <p>Your website is your hardest-working salesperson. We build beautiful, fast websites that turn visitors into clients — and help you get found in the first place.</p>
+    <p>From brand-new launches to scalable platforms for growing businesses, we handle design, development, and the strategy behind it all.</p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-grid">
+    <div class="service-item reveal">
+      <p class="service-num">01</p>
+      <h3 class="service-name">Web Design &amp; Development</h3>
+      <p class="service-desc">Custom, pixel-perfect websites designed around your brand and built to convert — fast, accessible, and ready to scale.</p>
+    </div>
+    <div class="service-item reveal">
+      <p class="service-num">02</p>
+      <h3 class="service-name">Scalable Infrastructure</h3>
+      <p class="service-desc">Robust backends, CMS setups, and tech stacks that grow with your business without slowing you down.</p>
+    </div>
+    <div class="service-item reveal">
+      <p class="service-num">03</p>
+      <h3 class="service-name">More Traffic, More Revenue</h3>
+      <p class="service-desc">SEO-first architecture and performance optimization that brings the right people to your site — and keeps them there.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <p class="results-label reveal">Results</p>
+  <div class="results-stats">
+    <div class="reveal">
+      <div class="stat-number">3×</div>
+      <p class="stat-label">Average increase in organic traffic within 6 months of launch.</p>
+    </div>
+    <div class="reveal">
+      <div class="stat-number">48h</div>
+      <p class="stat-label">Average turnaround for design concepts after kickoff.</p>
+    </div>
+    <div class="reveal">
+      <div class="stat-number">100%</div>
+      <p class="stat-label">Client retention rate — we're only done when you're thriving.</p>
+    </div>
+  </div>
+  <p class="results-quote reveal">
+    "A great website doesn't just look good — it <em>earns its keep</em> every single day."
+  </p>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="process-header">
+    <p class="process-label reveal">How it works</p>
+    <h2 class="process-heading reveal">Simple process.<br>Exceptional output.</h2>
+  </div>
+  <div class="process-steps">
+    <div class="step reveal">
+      <p class="step-num">01</p>
+      <h3 class="step-name">Discovery</h3>
+      <p class="step-desc">We learn your business, goals, and audience. No templates — just a strategy built around you.</p>
+    </div>
+    <div class="step reveal">
+      <p class="step-num">02</p>
+      <h3 class="step-name">Design</h3>
+      <p class="step-desc">Wireframes to polished visuals. You review, refine, and approve before a single line of code is written.</p>
+    </div>
+    <div class="step reveal">
+      <p class="step-num">03</p>
+      <h3 class="step-name">Build</h3>
+      <p class="step-desc">Clean, performant code. We build fast, responsive, and SEO-ready — with full QA before launch.</p>
+    </div>
+    <div class="step reveal">
+      <p class="step-num">04</p>
+      <h3 class="step-name">Launch &amp; Grow</h3>
+      <p class="step-desc">Go live with confidence. We stick around for ongoing support, updates, and growth work.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <p class="cta-small">Ready?</p>
+  <h2 class="cta-heading reveal">Let's build something <em>worth</em> finding.</h2>
+  <a class="cta-btn" href="mailto:hello@novaneoweb.com">Start a project →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 novaneoweb.</span>
+  <span>hello@novaneoweb.com</span>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
